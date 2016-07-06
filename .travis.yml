@@ -1,15 +1,12 @@
-os:
-    - linux
-    - osx
-sudo: required
-dist: trusty
 language: objective-c
 osx_image: xcode7.3
 xcode_workspace: Cryptography.xcworkspace
 xcode_scheme: Cryptography
 podfile: Podfile
-before_install: gem install cocoapods -v '= 1.0.0'
+before_install:
+- gem install cocoapods -v '= 1.0.0'
+- gem install xcpretty
 script:
-- set -o pipefail
-- xcodebuild -workspace Cryptography.xcworkspace -scheme Cryptography test -sdk macosx | xcpretty -c
+- set -o pipefail # required to let xcpretty use the same exit code like xcodebuild
+- xcodebuild -workspace Cryptography.xcworkspace -scheme "Cryptography" -destination name="iPhone 6" -destination name="iPhone 6" test | xcpretty -c
 - pod lib lint --quick
