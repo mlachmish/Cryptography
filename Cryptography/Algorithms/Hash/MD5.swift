@@ -42,12 +42,15 @@ class MD5 {
     // swiftlint:enable variable_name
     // swiftlint:enable line_length
     // swiftlint:enable comma
+
     static func preprocessMessage(message: Array<UInt8>) -> Array<UInt8> {
-        var preprocessedMessage = message
+        var preprocessedMessage = message //Copy message
+
         //Pre-processing: adding a single 1 bit
         //Notice: the input bytes are considered as bits strings,
         //where the first bit is the most significant bit of the byte.
         preprocessedMessage.append(0x80)
+
         //Pre-processing: padding with zeros
         //append "0" bit until message length in bits ≡ 448 (mod 512)
         let desiredMessageLengthModulo = (MD5Constants.messageLengthBits - 8)
@@ -58,6 +61,7 @@ class MD5 {
             messageLength += 1
         }
         preprocessedMessage += Array<UInt8>(count: paddingCounter, repeatedValue: 0)
+
         //append original length in bits mod (2 pow 64) to message
         preprocessedMessage.reserveCapacity(preprocessedMessage.count + 4)
         let lengthInBits = (message.count * 8)
@@ -79,6 +83,7 @@ class MD5 {
 
         //Process the message in successive 512-bit chunks:
         let chunkSizeBytes = 512 / 8
+
         for chunk in preprocessedMessage.splitToChuncks(chunkSizeBytes) {
             //break chunk into sixteen 32-bit words M[j], 0 ≤ j ≤ 15
             let M = Representations.mergeToUInt32Array(chunk)
@@ -114,6 +119,7 @@ class MD5 {
                 default:
                     break
                 }
+
                 let dTemp = D
                 D = C
                 C = B
@@ -128,10 +134,10 @@ class MD5 {
         }
 
         var result = Array<UInt8>()
-        result.reserveCapacity(128/8)
 
+        result.reserveCapacity(128/8)
         [a0, b0, c0, d0].forEach {
-            result += Representations.toUInt8Array($0.reverseBytes())
+            result += Representations.toUInt8Array($0.littleEndian.reverseBytes())
         }
 
         return Representations.toHexadecimalString(result)

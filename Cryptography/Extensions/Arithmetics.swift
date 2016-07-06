@@ -23,4 +23,5 @@ extension UInt32 {
         let tmp2 = ((self & 0x00FF0000) >> 8)  | ((self & 0xFF000000) >> 24)
         return tmp1 | tmp2
     }
+
 }

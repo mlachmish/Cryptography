@@ -14,6 +14,7 @@ enum HashMethod {
 }
 
 class Cryptography {
+
     func hash(message: String, method: HashMethod) -> String {
         switch method {
         case .MD5:
@@ -22,4 +23,5 @@ class Cryptography {
             return message
         }
     }
+
 }
