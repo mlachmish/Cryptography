@@ -33,7 +33,7 @@ class MD5Tests: XCTestCase {
     
     func testPositive3() {
         let expected = [0xe4, 0xd9, 0x09, 0xc2, 0x90, 0xd0, 0xfb, 0x1c, 0xa0, 0x68, 0xff, 0xad, 0xdf, 0x22, 0xcb, 0xd0] as Array<UInt8>
-        XCTAssertEqual(MD5.digest("The quick brown fox jumps over the lazy dog.1"), expected, "Bad digest")
+        XCTAssertEqual(MD5.digest("The quick brown fox jumps over the lazy dog."), expected, "Bad digest")
     }
     
     func testPerformanceExample() {
