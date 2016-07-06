@@ -66,7 +66,7 @@ class MD5 {
         return preprocessedMessage
     }
 
-    static func digest(message: String) -> Array<UInt8> {
+    static func digest(message: String) -> String {
 
         //Initialize variables:
         var a0 = UInt32(0x67452301)   //A
@@ -134,7 +134,7 @@ class MD5 {
             result += Representations.toUInt8Array($0.reverseBytes())
         }
 
-        return result
+        return Representations.toHexadecimalString(result)
     }
 
 }

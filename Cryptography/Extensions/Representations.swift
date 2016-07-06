@@ -32,4 +32,12 @@ class Representations {
         }
         return result
     }
+    //Return hexadecimal string representation of Array<UInt8>
+    static func toHexadecimalString(bytes: Array<UInt8>) -> String {
+        var hexString = String()
+        for byte in bytes {
+            hexString = hexString.stringByAppendingFormat("%02x", byte)
+        }
+        return hexString
+    }
 }

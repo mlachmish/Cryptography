@@ -18,23 +18,19 @@ class MD5Tests: XCTestCase {
     }
 
     func testPositive1() {
-        let expected = [0xd4, 0x1d, 0x8c, 0xd9, 0x8f, 0x00, 0xb2, 0x04,
-                        0xe9, 0x80, 0x09, 0x98, 0xec, 0xf8, 0x42, 0x7e] as Array<UInt8>
-        XCTAssertEqual(MD5.digest(""), expected, "Bad digest")
+        XCTAssertEqual(MD5.digest(""),
+                       "d41d8cd98f00b204e9800998ecf8427e",
+                       "MD5 test failed")
     }
     func testPositive2() {
-        let expected = [0x9e, 0x10, 0x7d, 0x9d, 0x37, 0x2b, 0xb6, 0x82,
-                        0x6b, 0xd8, 0x1d, 0x35, 0x42, 0xa4, 0x19, 0xd6] as Array<UInt8>
         XCTAssertEqual(MD5.digest("The quick brown fox jumps over the lazy dog"),
-                       expected,
-                       "Bad digest")
+                       "9e107d9d372bb6826bd81d3542a419d6",
+                       "MD5 test failed")
     }
     func testPositive3() {
-        let expected = [0xe4, 0xd9, 0x09, 0xc2, 0x90, 0xd0, 0xfb, 0x1c,
-                        0xa0, 0x68, 0xff, 0xad, 0xdf, 0x22, 0xcb, 0xd0] as Array<UInt8>
         XCTAssertEqual(MD5.digest("The quick brown fox jumps over the lazy dog."),
-                       expected,
-                       "Bad digest")
+                       "e4d909c290d0fb1ca068ffaddf22cbd0",
+                       "MD5 test failed")
     }
     func testPerformanceExample() {
         self.measureBlock {

@@ -8,32 +8,32 @@
       <sourceFolder url="file://$MODULE_DIR$/CryptographyTests/Extensions/AccessorsTests.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CryptographyTests/Extensions/ArithmeticsTests.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Cryptography/Algorithms/Hash/MD5.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Cryptography/Info.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Cryptography/Cryptography.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Cryptography/Extensions/Accessors.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Cryptography/Extensions/Arithmetics.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Cryptography/Extensions/Representations.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Cryptography/Extensions/ArraySlicer.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Cryptography/Cryptography.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-Cryptography/Pods-Cryptography-dummy.m" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Cryptography/Info.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-Cryptography/Pods-Cryptography-acknowledgements.markdown" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-Cryptography/Pods-Cryptography.release.xcconfig" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-Cryptography/Pods-Cryptography-acknowledgements.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-Cryptography/Pods-Cryptography-resources.sh" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-Cryptography/Pods-Cryptography.modulemap" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-Cryptography/Pods-Cryptography-umbrella.h" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-Cryptography/Pods-Cryptography-acknowledgements.markdown" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-Cryptography/Pods-Cryptography-frameworks.sh" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-Cryptography/Info.plist" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-Cryptography/Pods-Cryptography-frameworks.sh" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-Cryptography/Pods-Cryptography-dummy.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-Cryptography/Pods-Cryptography.debug.xcconfig" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-CryptographyTests/Pods-CryptographyTests-acknowledgements.plist" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-CryptographyTests/Pods-CryptographyTests.release.xcconfig" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-CryptographyTests/Pods-CryptographyTests-umbrella.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-CryptographyTests/Pods-CryptographyTests-frameworks.sh" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-CryptographyTests/Pods-CryptographyTests.modulemap" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-CryptographyTests/Pods-CryptographyTests-umbrella.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-CryptographyTests/Pods-CryptographyTests.release.xcconfig" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-CryptographyTests/Info.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-CryptographyTests/Pods-CryptographyTests-dummy.m" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-CryptographyTests/Pods-CryptographyTests-resources.sh" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-CryptographyTests/Pods-CryptographyTests.debug.xcconfig" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-CryptographyTests/Pods-CryptographyTests-acknowledgements.markdown" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-CryptographyTests/Pods-CryptographyTests.modulemap" isTestSource="false" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
