@@ -7,4 +7,6 @@ language: objective-c
 osx_image: xcode7.3
 xcode_workspace: Cryptography.xcworkspace
 xcode_scheme: Cryptography
-script: ./test.sh
+script:
+- set -o pipefail
+- xcodebuild -workspace Cryptography.xcworkspace -scheme Cryptography test -sdk macosx | xcpretty -c
