@@ -191,6 +191,7 @@
 				906740741D2AE326009A988D /* Headers */,
 				906740751D2AE326009A988D /* Resources */,
 				869C78C4CA66087DC52CF264 /* [CP] Copy Pods Resources */,
+				90712B681D2D57D3000485ED /* SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -350,6 +351,20 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Cryptography/Pods-Cryptography-resources.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		90712B681D2D57D3000485ED /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
 		};
 /* End PBXShellScriptBuildPhase section */
 

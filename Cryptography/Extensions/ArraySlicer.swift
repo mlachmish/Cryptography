@@ -9,11 +9,8 @@
 import Foundation
 
 extension Array {
-   
     public func splitToChuncks(chunkSize: Int) -> AnyGenerator<ArraySlice<Element>> {
-        
         var offset: Int = 0
-        
         return AnyGenerator {
             let end = min(chunkSize, self.count - offset)
             let result = self[offset..<offset + end]
@@ -21,5 +18,4 @@ extension Array {
             return !result.isEmpty ? result : nil
         }
     }
-
 }

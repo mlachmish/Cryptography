@@ -10,12 +10,12 @@ import Foundation
 
 extension UInt32 {
 
-    public func rotateLeft(n:UInt32) -> UInt32 {
-        return ((self << n) & 0xFFFFFFFF) | (self >> (32 - n))
+    public func rotateLeft(times: UInt32) -> UInt32 {
+        return ((self << times) & 0xFFFFFFFF) | (self >> (32 - times))
     }
 
-    public func rotateRight(n:UInt32) -> UInt32 {
-        return (self >> n) | (self << (32 - n))
+    public func rotateRight(times: UInt32) -> UInt32 {
+        return (self >> times) | (self << (32 - times))
     }
 
     func reverseBytes() -> UInt32 {
@@ -23,5 +23,4 @@ extension UInt32 {
         let tmp2 = ((self & 0x00FF0000) >> 8)  | ((self & 0xFF000000) >> 24)
         return tmp1 | tmp2
     }
-    
 }
