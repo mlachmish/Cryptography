@@ -9,4 +9,4 @@ before_install:
 script:
 - set -o pipefail # required to let xcpretty use the same exit code like xcodebuild
 - xcodebuild -workspace Cryptography.xcworkspace -scheme "Cryptography" -destination name="iPhone 6" -destination name="iPhone 6" test | xcpretty -c
-- pod lib lint --quick
+#- pod lib lint --quick # lint podspec
