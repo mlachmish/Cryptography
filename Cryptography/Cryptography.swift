@@ -19,8 +19,8 @@ class Cryptography {
         switch method {
         case .MD5:
             return MD5.hash(message)
-        default:
-            return message
+        case .SHA1:
+            return SHA1.hash(message)
         }
     }
 
