@@ -7,4 +7,4 @@ language: objective-c
 osx_image: xcode7.3
 xcode_workspace: Cryptography.xcworkspace
 xcode_scheme: Cryptography
-xcode_sdk: iphonesimulator9.3
+script: ./test.sh
