@@ -10,9 +10,10 @@
 		59963D8F178F43B4C56C6723 /* Pods_CryptographyTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CFBCD2238D6D0B66A7C00C6 /* Pods_CryptographyTests.framework */; };
 		62DD91F13CFE534069A2FB3F /* MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DD977C58657B9E58C13CF1 /* MD5.swift */; };
 		62DD93F45EBBA71C328C5F70 /* Arithmetics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DD9150F5C21F9CB03660E1 /* Arithmetics.swift */; };
-		62DD955A8A04650679D2C40D /* MD5Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DD9F77DB2889E283FCB1B6 /* MD5Tests.swift */; };
+		62DD944C94BC45A50831BF7D /* ArithmeticsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DD9AF00DCA5B8A1E6E3909 /* ArithmeticsTests.swift */; };
+		62DD956BC9642840D422925E /* AccessorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DD9C0DB68FE09A15BCAB37 /* AccessorsTests.swift */; };
 		62DD9675F9C985C3DB2EBD14 /* ArraySlicer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DD93ACD6944601CF6556CB /* ArraySlicer.swift */; };
-		62DD9A1CB343FC2A4A239ACE /* ArithmeticsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DD9AD43CF0AB8E13B7F35E /* ArithmeticsTests.swift */; };
+		62DD9E796E82B917B63BD8E0 /* MD5Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DD9547EF7BEEA51DDBF684 /* MD5Tests.swift */; };
 		62DD9E7E4E9E6837D7CC6504 /* MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DD977C58657B9E58C13CF1 /* MD5.swift */; };
 		62DD9FE8E6A2B7399D32CB81 /* Representations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DD919F73CA2BC4D7F5613D /* Representations.swift */; };
 		776FF7BDBF1A45E6C201071A /* Pods_Cryptography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D80898C654248DD66FFF193 /* Pods_Cryptography.framework */; };
@@ -20,7 +21,6 @@
 		906740821D2AE326009A988D /* Cryptography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 906740771D2AE326009A988D /* Cryptography.framework */; };
 		90712B611D2D43C3000485ED /* Representations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DD919F73CA2BC4D7F5613D /* Representations.swift */; };
 		90712B631D2D5058000485ED /* Accessors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90712B621D2D5058000485ED /* Accessors.swift */; };
-		90712B651D2D5167000485ED /* AccessorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90712B641D2D5167000485ED /* AccessorsTests.swift */; };
 		90712B661D2D528A000485ED /* Accessors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90712B621D2D5058000485ED /* Accessors.swift */; };
 		90712B671D2D54D9000485ED /* Arithmetics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DD9150F5C21F9CB03660E1 /* Arithmetics.swift */; };
 /* End PBXBuildFile section */
@@ -43,9 +43,10 @@
 		62DD9150F5C21F9CB03660E1 /* Arithmetics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Arithmetics.swift; sourceTree = "<group>"; };
 		62DD919F73CA2BC4D7F5613D /* Representations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Representations.swift; sourceTree = "<group>"; };
 		62DD93ACD6944601CF6556CB /* ArraySlicer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArraySlicer.swift; sourceTree = "<group>"; };
+		62DD9547EF7BEEA51DDBF684 /* MD5Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MD5Tests.swift; sourceTree = "<group>"; };
 		62DD977C58657B9E58C13CF1 /* MD5.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MD5.swift; sourceTree = "<group>"; };
-		62DD9AD43CF0AB8E13B7F35E /* ArithmeticsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArithmeticsTests.swift; sourceTree = "<group>"; };
-		62DD9F77DB2889E283FCB1B6 /* MD5Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MD5Tests.swift; sourceTree = "<group>"; };
+		62DD9AF00DCA5B8A1E6E3909 /* ArithmeticsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArithmeticsTests.swift; sourceTree = "<group>"; };
+		62DD9C0DB68FE09A15BCAB37 /* AccessorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessorsTests.swift; sourceTree = "<group>"; };
 		74B90AD33C9235393E76A86C /* Pods-CryptographyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptographyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CryptographyTests/Pods-CryptographyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7F492EB75D9E87BF2CCAA7A3 /* Pods-CryptographyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptographyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CryptographyTests/Pods-CryptographyTests.release.xcconfig"; sourceTree = "<group>"; };
 		906740771D2AE326009A988D /* Cryptography.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cryptography.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,7 +55,6 @@
 		906740811D2AE326009A988D /* CryptographyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptographyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		906740881D2AE326009A988D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90712B621D2D5058000485ED /* Accessors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Accessors.swift; sourceTree = "<group>"; };
-		90712B641D2D5167000485ED /* AccessorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessorsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +86,14 @@
 			path = Algorithms;
 			sourceTree = "<group>";
 		};
+		62DD931FC4A062A2C1486B0B /* Algorithms */ = {
+			isa = PBXGroup;
+			children = (
+				62DD9547EF7BEEA51DDBF684 /* MD5Tests.swift */,
+			);
+			path = Algorithms;
+			sourceTree = "<group>";
+		};
 		62DD962AE1326CC645DF4E4C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +111,15 @@
 				62DD977C58657B9E58C13CF1 /* MD5.swift */,
 			);
 			path = Hash;
+			sourceTree = "<group>";
+		};
+		62DD9F65B1DCBFC83DABE454 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				62DD9C0DB68FE09A15BCAB37 /* AccessorsTests.swift */,
+				62DD9AF00DCA5B8A1E6E3909 /* ArithmeticsTests.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		7DD4D59DD5D3245841BC6B9C /* Frameworks */ = {
@@ -149,9 +166,8 @@
 			isa = PBXGroup;
 			children = (
 				906740881D2AE326009A988D /* Info.plist */,
-				62DD9F77DB2889E283FCB1B6 /* MD5Tests.swift */,
-				90712B641D2D5167000485ED /* AccessorsTests.swift */,
-				62DD9AD43CF0AB8E13B7F35E /* ArithmeticsTests.swift */,
+				62DD9F65B1DCBFC83DABE454 /* Extensions */,
+				62DD931FC4A062A2C1486B0B /* Algorithms */,
 			);
 			path = CryptographyTests;
 			sourceTree = "<group>";
@@ -386,12 +402,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				90712B661D2D528A000485ED /* Accessors.swift in Sources */,
-				62DD955A8A04650679D2C40D /* MD5Tests.swift in Sources */,
-				62DD9A1CB343FC2A4A239ACE /* ArithmeticsTests.swift in Sources */,
 				90712B611D2D43C3000485ED /* Representations.swift in Sources */,
 				90712B671D2D54D9000485ED /* Arithmetics.swift in Sources */,
 				62DD9E7E4E9E6837D7CC6504 /* MD5.swift in Sources */,
-				90712B651D2D5167000485ED /* AccessorsTests.swift in Sources */,
+				62DD956BC9642840D422925E /* AccessorsTests.swift in Sources */,
+				62DD944C94BC45A50831BF7D /* ArithmeticsTests.swift in Sources */,
+				62DD9E796E82B917B63BD8E0 /* MD5Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
