@@ -8,14 +8,10 @@
 
 import Foundation
 
-extension Int {
-    
-    public func bytesRepresentation(totalBytes: Int = sizeof(Int)) -> Array<UInt8> {
-        return toByteArray(self, length: totalBytes)
-    }
-    
+class Representations {
+
     //Array of bytes with optional padding (little-endian)
-    func toByteArray<T>(value: T, length:Int? = nil) -> [UInt8] {
+    static func toByteArray<T>(value: T, length:Int? = nil) -> Array<UInt8> {
         let totalBytes = length ?? sizeof(T)
         
         var copyOfValue = value
@@ -23,4 +19,5 @@ extension Int {
             Array(UnsafeBufferPointer(start: UnsafePointer<UInt8>($0), count: totalBytes)).reverse()
         }
     }
+
 }

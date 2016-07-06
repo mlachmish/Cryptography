@@ -1,5 +1,5 @@
 //
-//  Array+SequenceGenerator.swift
+//  ArraySlicer.swift
 //  Cryptography
 //
 //  Created by Matan Lachmish on 05/07/2016.

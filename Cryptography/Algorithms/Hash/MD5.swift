@@ -136,7 +136,7 @@ class MD5 {
         preprocessedMessage.reserveCapacity(preprocessedMessage.count + 4)
 
         let lengthInBits = (message.count * 8)
-        let lengthBytes = lengthInBits.bytesRepresentation(64 / 8)
+        let lengthBytes = Representations.toByteArray(lengthInBits, length: 64/8)
         preprocessedMessage += lengthBytes.reverse()
 
         return preprocessedMessage
