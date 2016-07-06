@@ -53,7 +53,7 @@ class MD5 {
         let chunkSizeBytes = 512 / 8
         for chunk in preprocessedMessage.splitToChuncks(chunkSizeBytes) {
             //break chunk into sixteen 32-bit words M[j], 0 ≤ j ≤ 15
-            let M = toUInt32Array(chunk)
+            let M = Representations.mergeToUInt32Array(chunk)
 
             //Initialize hash value for this chunk:
             var A: UInt32 = a0
@@ -136,25 +136,10 @@ class MD5 {
         preprocessedMessage.reserveCapacity(preprocessedMessage.count + 4)
 
         let lengthInBits = (message.count * 8)
-        let lengthBytes = Representations.toByteArray(lengthInBits, length: 64/8)
+        let lengthBytes = Representations.toUInt8Array(lengthInBits, length: 64/8)
         preprocessedMessage += lengthBytes.reverse()
 
         return preprocessedMessage
     }
-    
-    //TODO: move
-    static func toUInt32Array(slice: ArraySlice<UInt8>) -> Array<UInt32> {
-        var result = Array<UInt32>()
-        result.reserveCapacity(16)
-        
-        for idx in slice.startIndex.stride(to: slice.endIndex, by: sizeof(UInt32)) {
-            let val1:UInt32 = (UInt32(slice[idx.advancedBy(3)]) << 24)
-            let val2:UInt32 = (UInt32(slice[idx.advancedBy(2)]) << 16)
-            let val3:UInt32 = (UInt32(slice[idx.advancedBy(1)]) << 8)
-            let val4:UInt32 = UInt32(slice[idx])
-            let val:UInt32 = val1 | val2 | val3 | val4
-            result.append(val)
-        }
-        return result
-    }
+
 }
