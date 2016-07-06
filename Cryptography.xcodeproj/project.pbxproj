@@ -17,6 +17,7 @@
 		62DD9E7E4E9E6837D7CC6504 /* MD5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DD977C58657B9E58C13CF1 /* MD5.swift */; };
 		62DD9FE8E6A2B7399D32CB81 /* Representations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DD919F73CA2BC4D7F5613D /* Representations.swift */; };
 		776FF7BDBF1A45E6C201071A /* Pods_Cryptography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D80898C654248DD66FFF193 /* Pods_Cryptography.framework */; };
+		9062957A1D2DA88000CC7E64 /* Cryptography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906295791D2DA88000CC7E64 /* Cryptography.swift */; };
 		9067407B1D2AE326009A988D /* Cryptography.h in Headers */ = {isa = PBXBuildFile; fileRef = 9067407A1D2AE326009A988D /* Cryptography.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		906740821D2AE326009A988D /* Cryptography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 906740771D2AE326009A988D /* Cryptography.framework */; };
 		90712B611D2D43C3000485ED /* Representations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DD919F73CA2BC4D7F5613D /* Representations.swift */; };
@@ -49,6 +50,7 @@
 		62DD9C0DB68FE09A15BCAB37 /* AccessorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessorsTests.swift; sourceTree = "<group>"; };
 		74B90AD33C9235393E76A86C /* Pods-CryptographyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptographyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CryptographyTests/Pods-CryptographyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7F492EB75D9E87BF2CCAA7A3 /* Pods-CryptographyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptographyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CryptographyTests/Pods-CryptographyTests.release.xcconfig"; sourceTree = "<group>"; };
+		906295791D2DA88000CC7E64 /* Cryptography.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cryptography.swift; sourceTree = "<group>"; };
 		906740771D2AE326009A988D /* Cryptography.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cryptography.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9067407A1D2AE326009A988D /* Cryptography.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Cryptography.h; sourceTree = "<group>"; };
 		9067407C1D2AE326009A988D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 				9067407C1D2AE326009A988D /* Info.plist */,
 				62DD962AE1326CC645DF4E4C /* Extensions */,
 				62DD927DDC1FE24A3C7AAE68 /* Algorithms */,
+				906295791D2DA88000CC7E64 /* Cryptography.swift */,
 			);
 			path = Cryptography;
 			sourceTree = "<group>";
@@ -392,6 +395,7 @@
 				62DD93F45EBBA71C328C5F70 /* Arithmetics.swift in Sources */,
 				62DD9675F9C985C3DB2EBD14 /* ArraySlicer.swift in Sources */,
 				62DD9FE8E6A2B7399D32CB81 /* Representations.swift in Sources */,
+				9062957A1D2DA88000CC7E64 /* Cryptography.swift in Sources */,
 				62DD91F13CFE534069A2FB3F /* MD5.swift in Sources */,
 				90712B631D2D5058000485ED /* Accessors.swift in Sources */,
 			);

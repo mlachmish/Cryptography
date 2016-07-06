@@ -7,13 +7,14 @@
       <sourceFolder url="file://$MODULE_DIR$/CryptographyTests/Info.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CryptographyTests/Extensions/AccessorsTests.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CryptographyTests/Extensions/ArithmeticsTests.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Cryptography/Algorithms/Hash/MD5.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Cryptography/Info.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Cryptography/Cryptography.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Cryptography/Algorithms/Hash/MD5.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Cryptography/Cryptography.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Cryptography/Extensions/Accessors.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Cryptography/Extensions/Arithmetics.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Cryptography/Extensions/Representations.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Cryptography/Extensions/ArraySlicer.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Cryptography/Info.plist" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-Cryptography/Pods-Cryptography-acknowledgements.markdown" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-Cryptography/Pods-Cryptography.release.xcconfig" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Pods/Target Support Files/Pods-Cryptography/Pods-Cryptography-acknowledgements.plist" isTestSource="false" />

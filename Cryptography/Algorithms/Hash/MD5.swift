@@ -66,7 +66,7 @@ class MD5 {
         return preprocessedMessage
     }
 
-    static func digest(message: String) -> String {
+    static func hash(message: String) -> String {
 
         //Initialize variables:
         var a0 = UInt32(0x67452301)   //A
