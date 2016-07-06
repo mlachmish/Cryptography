@@ -19,6 +19,10 @@
 		9067407B1D2AE326009A988D /* Cryptography.h in Headers */ = {isa = PBXBuildFile; fileRef = 9067407A1D2AE326009A988D /* Cryptography.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		906740821D2AE326009A988D /* Cryptography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 906740771D2AE326009A988D /* Cryptography.framework */; };
 		90712B611D2D43C3000485ED /* Representations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DD919F73CA2BC4D7F5613D /* Representations.swift */; };
+		90712B631D2D5058000485ED /* Accessors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90712B621D2D5058000485ED /* Accessors.swift */; };
+		90712B651D2D5167000485ED /* AccessorsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90712B641D2D5167000485ED /* AccessorsTests.swift */; };
+		90712B661D2D528A000485ED /* Accessors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90712B621D2D5058000485ED /* Accessors.swift */; };
+		90712B671D2D54D9000485ED /* Arithmetics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DD9150F5C21F9CB03660E1 /* Arithmetics.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,8 @@
 		9067407C1D2AE326009A988D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		906740811D2AE326009A988D /* CryptographyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptographyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		906740881D2AE326009A988D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		90712B621D2D5058000485ED /* Accessors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Accessors.swift; sourceTree = "<group>"; };
+		90712B641D2D5167000485ED /* AccessorsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccessorsTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +92,7 @@
 				62DD9150F5C21F9CB03660E1 /* Arithmetics.swift */,
 				62DD93ACD6944601CF6556CB /* ArraySlicer.swift */,
 				62DD919F73CA2BC4D7F5613D /* Representations.swift */,
+				90712B621D2D5058000485ED /* Accessors.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -143,6 +150,7 @@
 			children = (
 				906740881D2AE326009A988D /* Info.plist */,
 				62DD9F77DB2889E283FCB1B6 /* MD5Tests.swift */,
+				90712B641D2D5167000485ED /* AccessorsTests.swift */,
 				62DD9AD43CF0AB8E13B7F35E /* ArithmeticsTests.swift */,
 			);
 			path = CryptographyTests;
@@ -354,6 +362,7 @@
 				62DD9675F9C985C3DB2EBD14 /* ArraySlicer.swift in Sources */,
 				62DD9FE8E6A2B7399D32CB81 /* Representations.swift in Sources */,
 				62DD91F13CFE534069A2FB3F /* MD5.swift in Sources */,
+				90712B631D2D5058000485ED /* Accessors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,10 +370,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90712B661D2D528A000485ED /* Accessors.swift in Sources */,
 				62DD955A8A04650679D2C40D /* MD5Tests.swift in Sources */,
 				62DD9A1CB343FC2A4A239ACE /* ArithmeticsTests.swift in Sources */,
 				90712B611D2D43C3000485ED /* Representations.swift in Sources */,
+				90712B671D2D54D9000485ED /* Arithmetics.swift in Sources */,
 				62DD9E7E4E9E6837D7CC6504 /* MD5.swift in Sources */,
+				90712B651D2D5167000485ED /* AccessorsTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

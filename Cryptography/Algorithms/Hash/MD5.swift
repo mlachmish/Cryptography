@@ -36,7 +36,37 @@ class MD5 {
                                            0x655b59c3,0x8f0ccc92,0xffeff47d,0x85845dd1,
                                            0x6fa87e4f,0xfe2ce6e0,0xa3014314,0x4e0811a1,
                                            0xf7537e82,0xbd3af235,0x2ad7d2bb,0xeb86d391]
-
+    
+    static func preprocessMessage(message: Array<UInt8>) -> Array<UInt8> {
+        var preprocessedMessage = message
+        
+        //Pre-processing: adding a single 1 bit
+        preprocessedMessage.append(0x80)
+        /* Notice: the input bytes are considered as bits strings,
+         where the first bit is the most significant bit of the byte. */
+        
+        //Pre-processing: padding with zeros
+        
+        //append "0" bit until message length in bits ≡ 448 (mod 512)
+        var messageLength = preprocessedMessage.count
+        var paddingCounter = 0
+        
+        while messageLength % MD5Constants.numberOfBitsToRepresentMessageLength != (MD5Constants.numberOfBitsToRepresentMessageLength - 8) {
+            paddingCounter += 1
+            messageLength += 1
+        }
+        
+        preprocessedMessage += Array<UInt8>(count: paddingCounter, repeatedValue: 0)
+        
+        //append original length in bits mod (2 pow 64) to message
+        preprocessedMessage.reserveCapacity(preprocessedMessage.count + 4)
+        
+        let lengthInBits = (message.count * 8)
+        let lengthBytes = Representations.toUInt8Array(lengthInBits, length: 64/8)
+        preprocessedMessage += lengthBytes.reverse()
+        
+        return preprocessedMessage
+    }
 
     static func digest(message: String) -> Array<UInt8> {
 
@@ -104,42 +134,10 @@ class MD5 {
         result.reserveCapacity(128/8)
 
         [a0,b0,c0,d0].forEach {
-            let littleEndianRepresentation = $0.littleEndian
-            result += [UInt8(littleEndianRepresentation & 0xff), UInt8((littleEndianRepresentation >> 8) & 0xff), UInt8((littleEndianRepresentation >> 16) & 0xff), UInt8((littleEndianRepresentation >> 24) & 0xff)]
+            result += Representations.toUInt8Array($0.reverseBytes())
         }
 
         return result
-    }
-
-    static func preprocessMessage(message: Array<UInt8>) -> Array<UInt8> {
-        var preprocessedMessage = message
-
-        //Pre-processing: adding a single 1 bit
-        preprocessedMessage.append(0x80)
-        /* Notice: the input bytes are considered as bits strings,
-         where the first bit is the most significant bit of the byte. */
-
-        //Pre-processing: padding with zeros
-
-        //append "0" bit until message length in bits ≡ 448 (mod 512)
-        var messageLength = preprocessedMessage.count
-        var paddingCounter = 0
-
-        while messageLength % MD5Constants.numberOfBitsToRepresentMessageLength != (MD5Constants.numberOfBitsToRepresentMessageLength - 8) {
-            paddingCounter += 1
-            messageLength += 1
-        }
-
-        preprocessedMessage += Array<UInt8>(count: paddingCounter, repeatedValue: 0)
-
-        //append original length in bits mod (2 pow 64) to message
-        preprocessedMessage.reserveCapacity(preprocessedMessage.count + 4)
-
-        let lengthInBits = (message.count * 8)
-        let lengthBytes = Representations.toUInt8Array(lengthInBits, length: 64/8)
-        preprocessedMessage += lengthBytes.reverse()
-
-        return preprocessedMessage
     }
 
 }
