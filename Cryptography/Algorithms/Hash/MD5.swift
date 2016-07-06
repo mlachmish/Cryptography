@@ -8,7 +8,7 @@ import Foundation
 //Fowllowing the pseudo code from https://en.wikipedia.org/wiki/MD5
 
 struct MD5Constants {
-    static let numberOfBitsToRepresentMessageLength = 64
+    static let messageLengthBits = 64
 }
 
 class MD5 {
@@ -50,10 +50,10 @@ class MD5 {
         preprocessedMessage.append(0x80)
         //Pre-processing: padding with zeros
         //append "0" bit until message length in bits ≡ 448 (mod 512)
-        let desiredMessageLengthModulo = (MD5Constants.numberOfBitsToRepresentMessageLength - 8)
+        let desiredMessageLengthModulo = (MD5Constants.messageLengthBits - 8)
         var messageLength = preprocessedMessage.count
         var paddingCounter = 0
-        while messageLength % MD5Constants.numberOfBitsToRepresentMessageLength != desiredMessageLengthModulo {
+        while messageLength % MD5Constants.messageLengthBits != desiredMessageLengthModulo {
             paddingCounter += 1
             messageLength += 1
         }
