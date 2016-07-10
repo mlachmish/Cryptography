@@ -8,11 +8,11 @@
 
 import Foundation
 
-struct SHA1Constants {
+private struct SHA1Constants {
     static let messageLengthBits = 64
 }
 
-class SHA1 {
+internal class SHA1: HashProtocol {
 
     static func preprocessMessage(message: Array<UInt8>) -> Array<UInt8> {
         var preprocessedMessage = message

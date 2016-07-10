@@ -7,11 +7,11 @@ import Foundation
 
 //Fowllowing the pseudo code from https://en.wikipedia.org/wiki/MD5
 
-struct MD5Constants {
+private struct MD5Constants {
     static let messageLengthBits = 64
 }
 
-class MD5 {
+internal class MD5: HashProtocol {
     // swiftlint:disable variable_name
     // swiftlint:disable line_length
     // swiftlint:disable comma

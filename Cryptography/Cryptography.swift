@@ -8,12 +8,7 @@
 
 import Foundation
 
-enum HashMethod {
-    case MD5
-    case SHA1
-}
-
-class Cryptography {
+public class Cryptography {
 
     func hash(message: String, method: HashMethod) -> String {
         switch method {

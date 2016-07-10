@@ -27,6 +27,7 @@
 		90712B631D2D5058000485ED /* Accessors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90712B621D2D5058000485ED /* Accessors.swift */; };
 		90712B661D2D528A000485ED /* Accessors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90712B621D2D5058000485ED /* Accessors.swift */; };
 		90712B671D2D54D9000485ED /* Arithmetics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DD9150F5C21F9CB03660E1 /* Arithmetics.swift */; };
+		909038191D326D7500A62BEB /* HashProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909038181D326D7500A62BEB /* HashProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		906740811D2AE326009A988D /* CryptographyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptographyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		906740881D2AE326009A988D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90712B621D2D5058000485ED /* Accessors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Accessors.swift; sourceTree = "<group>"; };
+		909038181D326D7500A62BEB /* HashProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 		62DD9EA9B28507B44DABF3E7 /* Hash */ = {
 			isa = PBXGroup;
 			children = (
+				909038181D326D7500A62BEB /* HashProtocol.swift */,
 				62DD977C58657B9E58C13CF1 /* MD5.swift */,
 				9062957B1D2DAB9A00CC7E64 /* SHA1.swift */,
 			);
@@ -402,6 +405,7 @@
 				62DD93F45EBBA71C328C5F70 /* Arithmetics.swift in Sources */,
 				62DD9675F9C985C3DB2EBD14 /* ArraySlicer.swift in Sources */,
 				62DD9FE8E6A2B7399D32CB81 /* Representations.swift in Sources */,
+				909038191D326D7500A62BEB /* HashProtocol.swift in Sources */,
 				9062957A1D2DA88000CC7E64 /* Cryptography.swift in Sources */,
 				9062957C1D2DAB9A00CC7E64 /* SHA1.swift in Sources */,
 				62DD91F13CFE534069A2FB3F /* MD5.swift in Sources */,
