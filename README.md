@@ -1,10 +1,11 @@
 <p align="center">
 <img src="assets/cryptography.png?raw=true" alt="Cryptography" width="250">
 </p>
-
+[![Build Status](https://travis-ci.org/mlachmish/Cryptography.svg?branch=master)](https://travis-ci.org/mlachmish/Cryptography)
+<br>
 # Cryptography
 
-[![Build Status](https://travis-ci.org/mlachmish/Cryptography.svg?branch=master)](https://travis-ci.org/mlachmish/Cryptography)
+A modern cryptography library in Swift.
 
 ## Author
 
