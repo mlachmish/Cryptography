@@ -14,12 +14,13 @@ private struct SHA1Constants {
 
 internal class SHA1: HashProtocol {
 
-    static func preprocessMessage(message: Array<UInt8>) -> Array<UInt8> {
+    private static func preprocessMessage(message: Array<UInt8>) -> Array<UInt8> {
         var preprocessedMessage = message
         //Pre-processing: adding a single 1 bit
         //Notice: the input bytes are considered as bits strings,
         //where the first bit is the most significant bit of the byte.
         preprocessedMessage.append(0x80)
+
         //Pre-processing: padding with zeros
         //append "0" bit until message length in bits ≡ 448 (mod 512)
         let desiredMessageLengthModulo = (SHA1Constants.messageLengthBits - 8)
@@ -38,6 +39,7 @@ internal class SHA1: HashProtocol {
         return preprocessedMessage
     }
 
+    // swiftlint:disable function_body_length
     static func hash(message: String) -> String {
         //Initialize variables:
         var a0 = UInt32(0x67452301)   //A
@@ -129,5 +131,6 @@ internal class SHA1: HashProtocol {
 
         return Representations.toHexadecimalString(result)
     }
+    // swiftlint:enable function_body_length
 
 }

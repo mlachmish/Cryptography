@@ -43,7 +43,7 @@ internal class MD5: HashProtocol {
     // swiftlint:enable line_length
     // swiftlint:enable comma
 
-    static func preprocessMessage(message: Array<UInt8>) -> Array<UInt8> {
+    private static func preprocessMessage(message: Array<UInt8>) -> Array<UInt8> {
         var preprocessedMessage = message //Copy message
 
         //Pre-processing: adding a single 1 bit
@@ -70,6 +70,7 @@ internal class MD5: HashProtocol {
         return preprocessedMessage
     }
 
+    // swiftlint:disable function_body_length
     static func hash(message: String) -> String {
 
         //Initialize variables:
@@ -142,5 +143,6 @@ internal class MD5: HashProtocol {
 
         return Representations.toHexadecimalString(result)
     }
+    // swiftlint:enable function_body_length
 
 }

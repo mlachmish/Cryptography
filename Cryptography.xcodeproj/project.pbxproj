@@ -28,6 +28,9 @@
 		90712B661D2D528A000485ED /* Accessors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90712B621D2D5058000485ED /* Accessors.swift */; };
 		90712B671D2D54D9000485ED /* Arithmetics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DD9150F5C21F9CB03660E1 /* Arithmetics.swift */; };
 		909038191D326D7500A62BEB /* HashProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909038181D326D7500A62BEB /* HashProtocol.swift */; };
+		9090381A1D32720C00A62BEB /* HashProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909038181D326D7500A62BEB /* HashProtocol.swift */; };
+		9090381C1D32762800A62BEB /* HMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9090381B1D32762800A62BEB /* HMAC.swift */; };
+		9090381E1D32763A00A62BEB /* MACProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9090381D1D32763A00A62BEB /* MACProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +67,8 @@
 		906740881D2AE326009A988D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		90712B621D2D5058000485ED /* Accessors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Accessors.swift; sourceTree = "<group>"; };
 		909038181D326D7500A62BEB /* HashProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashProtocol.swift; sourceTree = "<group>"; };
+		9090381B1D32762800A62BEB /* HMAC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HMAC.swift; sourceTree = "<group>"; };
+		9090381D1D32763A00A62BEB /* MACProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MACProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,10 +92,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		62DD90F093139CD6CE405173 /* MAC */ = {
+			isa = PBXGroup;
+			children = (
+				9090381D1D32763A00A62BEB /* MACProtocol.swift */,
+				9090381B1D32762800A62BEB /* HMAC.swift */,
+			);
+			path = MAC;
+			sourceTree = "<group>";
+		};
 		62DD927DDC1FE24A3C7AAE68 /* Algorithms */ = {
 			isa = PBXGroup;
 			children = (
 				62DD9EA9B28507B44DABF3E7 /* Hash */,
+				62DD90F093139CD6CE405173 /* MAC */,
 			);
 			path = Algorithms;
 			sourceTree = "<group>";
@@ -404,6 +419,8 @@
 			files = (
 				62DD93F45EBBA71C328C5F70 /* Arithmetics.swift in Sources */,
 				62DD9675F9C985C3DB2EBD14 /* ArraySlicer.swift in Sources */,
+				9090381C1D32762800A62BEB /* HMAC.swift in Sources */,
+				9090381E1D32763A00A62BEB /* MACProtocol.swift in Sources */,
 				62DD9FE8E6A2B7399D32CB81 /* Representations.swift in Sources */,
 				909038191D326D7500A62BEB /* HashProtocol.swift in Sources */,
 				9062957A1D2DA88000CC7E64 /* Cryptography.swift in Sources */,
@@ -424,6 +441,7 @@
 				62DD9E7E4E9E6837D7CC6504 /* MD5.swift in Sources */,
 				9062957F1D2DAE4C00CC7E64 /* SHA1.swift in Sources */,
 				62DD956BC9642840D422925E /* AccessorsTests.swift in Sources */,
+				9090381A1D32720C00A62BEB /* HashProtocol.swift in Sources */,
 				62DD944C94BC45A50831BF7D /* ArithmeticsTests.swift in Sources */,
 				62DD9E796E82B917B63BD8E0 /* MD5Tests.swift in Sources */,
 			);

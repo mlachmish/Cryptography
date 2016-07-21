@@ -1,5 +1,5 @@
 //
-//  HashProtocol.swift
+//  MACProtocol.swift
 //  Cryptography
 //
 //  Created by Matan Lachmish on 10/07/2016.
@@ -8,8 +8,8 @@
 
 import Foundation
 
-protocol HashProtocol {
+protocol MACProtocol {
 
-    static func hash(message: String) -> String
+    static func sign(message: String, key: String, hashMethod: HashMethod) -> String
 
 }
