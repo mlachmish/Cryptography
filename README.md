@@ -1,5 +1,5 @@
 <p align="center">
-<img src="assets/Cryptography.png?raw=true" alt="Cryptography" width="250">
+<img src="assets/cryptography.png?raw=true" alt="Cryptography" width="250">
 </p>
 
 # Cryptography
