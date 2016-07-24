@@ -4,10 +4,10 @@
 
 [![Language](https://img.shields.io/badge/language-swift-orange.svg?style=flat)](https://developer.apple.com/swift)
 [![Platform](https://img.shields.io/badge/platform-osx%20%7C%20ios%20%7C%20watchos%20%7C%20tvos-lightgrey.svg?style=flat)](https://developer.apple.com/swift)
-[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/mlachmish/Cryptography/blob/master/LICENSE)
+[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://raw.githubusercontent.com/mlachmish/Cryptography/blob/master/LICENSE)
 <br>
-[![Build Status](https://travis-ci.org/mlachmish/Cryptography.svg?branch=master)](https://travis-ci.org/mlachmish/Cryptography)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/137aa31f62464045aad5f190123fdf67)](https://www.codacy.com/app/mlachmish/Cryptography)
+[![Build Status](https://travis-ci.org/mlachmish/Cryptography.svg?style=flat&branch=master)](https://travis-ci.org/mlachmish/Cryptography)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/137aa31f62464045aad5f190123fdf67?style=flat)](https://www.codacy.com/app/mlachmish/Cryptography)
 
 <br>
 # Cryptography
