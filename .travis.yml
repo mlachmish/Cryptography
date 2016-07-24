@@ -10,4 +10,4 @@ script:
 - xcodebuild -workspace Cryptography.xcworkspace -scheme "Cryptography" -destination name="iPhone 6" -destination name="iPhone 6" test | xcpretty -c
 #- pod lib lint --quick # lint podspec
 after_success:
-  - bash <(curl -s https://codecov.io/bash)
+  - bash <(curl -s https://codecov.io/bash) -J 'Cryptography'
