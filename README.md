@@ -25,7 +25,7 @@
 </p>
 
 <br>
-A modern cryptography library in Swift.
+<p align="center">A modern cryptography library in Swift.</p>
 <br><br><br>
 <p align="center">
     <a href="#installation">Installation</a>
