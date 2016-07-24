@@ -25,6 +25,17 @@
 </p>
 
 A modern cryptography library in Swift.
+<br>
+<p align="center">
+    <a href="#installation">Installation</a>
+  • <a href="#usage">Usage</a>
+  • <a href="#author">Author</a>
+  • <a href="#license">License</a>
+</p>
+
+## Installation
+
+## Usage
 
 ## Author
 
