@@ -1,5 +1,5 @@
 <p align="center">
-<img src="assets/cryptography.png?raw=true" alt="Cryptography" width="250">
+<img src="assets/cryptography.png?raw=true" alt="Cryptography">
 </p>
 
 <p align = "center">
@@ -24,8 +24,9 @@
   </a>
 </p>
 
-A modern cryptography library in Swift.
 <br>
+A modern cryptography library in Swift.
+<br><br><br>
 <p align="center">
     <a href="#installation">Installation</a>
   • <a href="#usage">Usage</a>
