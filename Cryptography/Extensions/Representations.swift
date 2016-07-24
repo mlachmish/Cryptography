@@ -10,7 +10,7 @@ import Foundation
 
 class Representations {
 
-    //Array of bytes with optional padding (little-endian)
+    // Array of bytes with optional padding (little-endian)
     static func toUInt8Array<T>(value: T, length: Int? = nil) -> Array<UInt8> {
         let totalBytes = length ?? sizeof(T)
         var copyOfValue = value
@@ -20,7 +20,7 @@ class Representations {
         }
     }
 
-    //Merge Array of UInt8 to array of UInt32
+    // Merge Array of UInt8 to array of UInt32
     static func mergeToUInt32Array(slice: ArraySlice<UInt8>) -> Array<UInt32> {
         var result = Array<UInt32>()
         result.reserveCapacity(16)
@@ -37,7 +37,7 @@ class Representations {
         return result
     }
 
-    //Return hexadecimal string representation of Array<UInt8>
+    // Return hexadecimal string representation of Array<UInt8>
     static func toHexadecimalString(bytes: Array<UInt8>) -> String {
         var hexString = String()
         for byte in bytes {

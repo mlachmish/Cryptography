@@ -44,7 +44,7 @@ internal class MD5: HashProtocol {
     // swiftlint:enable comma
 
     private static func preprocessMessage(message: Array<UInt8>) -> Array<UInt8> {
-        var preprocessedMessage = message //Copy message
+        var preprocessedMessage = message // Copy message
 
         // Pre-processing: adding a single 1 bit
         // Notice: the input bytes are considered as bits strings,
@@ -74,10 +74,10 @@ internal class MD5: HashProtocol {
     static func hash(message: String) -> String {
 
         // Initialize variables:
-        var a0 = UInt32(0x67452301)   //A
-        var b0 = UInt32(0xefcdab89)   //B
-        var c0 = UInt32(0x98badcfe)   //C
-        var d0 = UInt32(0x10325476)   //D
+        var a0 = UInt32(0x67452301)   // A
+        var b0 = UInt32(0xefcdab89)   // B
+        var c0 = UInt32(0x98badcfe)   // C
+        var d0 = UInt32(0x10325476)   // D
 
         // Pre-processing
         let preprocessedMessage = preprocessMessage(Array(message.utf8))
