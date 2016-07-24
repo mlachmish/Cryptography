@@ -5,7 +5,7 @@
 
 import Foundation
 
-//Fowllowing the pseudo code from https://en.wikipedia.org/wiki/MD5
+// Fowllowing the pseudo code from https://en.wikipedia.org/wiki/MD5
 
 private struct MD5Constants {
     static let messageLengthBits = 64
@@ -16,13 +16,13 @@ internal class MD5: HashProtocol {
     // swiftlint:disable line_length
     // swiftlint:disable comma
 
-    //Specifies the per-round shift amounts
+    // Specifies the per-round shift amounts
     private static let s: Array<UInt32> = [7, 12, 17, 22,  7, 12, 17, 22,  7, 12, 17, 22,  7, 12, 17, 22,
                                            5,  9, 14, 20,  5,  9, 14, 20,  5,  9, 14, 20,  5,  9, 14, 20,
                                            4, 11, 16, 23,  4, 11, 16, 23,  4, 11, 16, 23,  4, 11, 16, 23,
                                            6, 10, 15, 21,  6, 10, 15, 21,  6, 10, 15, 21,  6, 10, 15, 21]
 
-    //Use binary integer part of the sines of integers (Radians) as constants
+    // Use binary integer part of the sines of integers (Radians) as constants
     private static let k: Array<UInt32> = [0xd76aa478, 0xe8c7b756, 0x242070db, 0xc1bdceee,
                                            0xf57c0faf, 0x4787c62a, 0xa8304613, 0xfd469501,
                                            0x698098d8, 0x8b44f7af, 0xffff5bb1, 0x895cd7be,
@@ -46,14 +46,14 @@ internal class MD5: HashProtocol {
     private static func preprocessMessage(message: Array<UInt8>) -> Array<UInt8> {
         var preprocessedMessage = message //Copy message
 
-        //Pre-processing: adding a single 1 bit
-        //Notice: the input bytes are considered as bits strings,
-        //where the first bit is the most significant bit of the byte.
+        // Pre-processing: adding a single 1 bit
+        // Notice: the input bytes are considered as bits strings,
+        // where the first bit is the most significant bit of the byte.
         preprocessedMessage.append(0x80)
 
-        //Pre-processing: padding with zeros
-        //append "0" bit until message length in bits ≡ 448 (mod 512)
-        let desiredMessageLengthModulo = (MD5Constants.messageLengthBits - 8)
+        // Pre-processing: padding with zeros
+        // append "0" bit until message length in bits ≡ 448 (mod 512)
+        let desiredMessageLengthModulo = MD5Constants.messageLengthBits - 8
         var messageLength = preprocessedMessage.count
         var paddingCounter = 0
         while messageLength % MD5Constants.messageLengthBits != desiredMessageLengthModulo {
@@ -62,9 +62,9 @@ internal class MD5: HashProtocol {
         }
         preprocessedMessage += Array<UInt8>(count: paddingCounter, repeatedValue: 0)
 
-        //append original length in bits mod (2 pow 64) to message
+        // append original length in bits mod (2 pow 64) to message
         preprocessedMessage.reserveCapacity(preprocessedMessage.count + 4)
-        let lengthInBits = (message.count * 8)
+        let lengthInBits = message.count * 8
         let lengthBytes = Representations.toUInt8Array(lengthInBits, length: 64/8)
         preprocessedMessage += lengthBytes.reverse()
         return preprocessedMessage
@@ -73,29 +73,29 @@ internal class MD5: HashProtocol {
     // swiftlint:disable function_body_length
     static func hash(message: String) -> String {
 
-        //Initialize variables:
+        // Initialize variables:
         var a0 = UInt32(0x67452301)   //A
         var b0 = UInt32(0xefcdab89)   //B
         var c0 = UInt32(0x98badcfe)   //C
         var d0 = UInt32(0x10325476)   //D
 
-        //Pre-processing
+        // Pre-processing
         let preprocessedMessage = preprocessMessage(Array(message.utf8))
 
-        //Process the message in successive 512-bit chunks:
+        // Process the message in successive 512-bit chunks:
         let chunkSizeBytes = 512 / 8
 
         for chunk in preprocessedMessage.splitToChuncks(chunkSizeBytes) {
-            //break chunk into sixteen 32-bit words M[j], 0 ≤ j ≤ 15
+            // break chunk into sixteen 32-bit words M[j], 0 ≤ j ≤ 15
             let M = Representations.mergeToUInt32Array(chunk)
 
-            //Initialize hash value for this chunk:
+            // Initialize hash value for this chunk:
             var A: UInt32 = a0
             var B: UInt32 = b0
             var C: UInt32 = c0
             var D: UInt32 = d0
 
-            //Main loop:
+            // Main loop:
             for i in 0..<s.count {
                 var F: UInt32 = 0
                 var g = 0

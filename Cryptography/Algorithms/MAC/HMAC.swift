@@ -13,4 +13,5 @@ internal class HMAC: MACProtocol {
     static func sign(message: String, key: String, hashMethod: HashMethod) -> String {
         return message
     }
+
 }
