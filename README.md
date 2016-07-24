@@ -1,7 +1,10 @@
 <p align="center">
 <img src="assets/cryptography.png?raw=true" alt="Cryptography" width="250">
 </p>
+
 [![Build Status](https://travis-ci.org/mlachmish/Cryptography.svg?branch=master)](https://travis-ci.org/mlachmish/Cryptography)
+[![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/mlachmish/Cryptography/blob/master/LICENSE)
+
 <br>
 # Cryptography
 
