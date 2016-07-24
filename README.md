@@ -7,7 +7,8 @@
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](https://raw.githubusercontent.com/mlachmish/Cryptography/blob/master/LICENSE)
 <br>
 [![Build Status](https://travis-ci.org/mlachmish/Cryptography.svg?style=flat&branch=master)](https://travis-ci.org/mlachmish/Cryptography)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/137aa31f62464045aad5f190123fdf67?style=flat)](https://www.codacy.com/app/mlachmish/Cryptography)
+[![Code Quality](https://api.codacy.com/project/badge/Grade/137aa31f62464045aad5f190123fdf67?style=flat)](https://www.codacy.com/app/mlachmish/Cryptography)
+[![Coverage](https://codecov.io/gh/mlachmish/Cryptography/branch/master/graph/badge.svg?style=flat)](https://codecov.io/gh/mlachmish/Cryptography)
 
 <br>
 # Cryptography
