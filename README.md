@@ -87,7 +87,13 @@ manager for Objective-C and Swift.
     import Cryptography
     ```
     
-#### Manually
+###Swift Package Manager
+You can use [Swift Package Manager](https://swift.org/package-manager/) and specify dependency in `Package.swift` by adding this:
+```
+.Package(url: "https://github.com/mlachmish/Cryptography.git", majorVersion: 0)
+```
+
+### Manually
 Download and drop ```/Cryptography``` folder in your project.
 
 ## Usage
