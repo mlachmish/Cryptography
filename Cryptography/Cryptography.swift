@@ -14,12 +14,12 @@ public enum HashMethod {
 }
 
 public enum MACMethod {
-    case HMAC
+    case HMAC(hashMethod: HashMethod)
 }
 
 public class Cryptography {
 
-    func hash(message: String, method: HashMethod) -> String {
+    static func hash(message: String, method: HashMethod) -> String {
         switch method {
         case .MD5:
             return MD5.hash(message)
@@ -28,9 +28,9 @@ public class Cryptography {
         }
     }
 
-    func sign(message: String, key: String, hashMethod: HashMethod, method: MACMethod) -> String {
+    static func sign(message: String, key: String, method: MACMethod) -> String {
         switch method {
-        case .HMAC:
+        case .HMAC(let hashMethod):
             return HMAC.sign(message, key: key, hashMethod: hashMethod)
         }
     }
