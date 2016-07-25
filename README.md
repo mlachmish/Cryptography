@@ -35,6 +35,55 @@
 
 ## Installation
 
+### Compatibility
+
+- OS X 10.9+ / iOS 8.0+ / watchOS 2.0 / tvOS 9.0
+
+- Xcode 7.1+, Swift 2.1+
+
+### Install Using CocoaPods
+[CocoaPods](https://cocoapods.org/) is a centralized dependency manager for
+Objective-C and Swift. Go [here](https://guides.cocoapods.org/using/index.html)
+to learn more.
+
+1. Add the project to your [Podfile](https://guides.cocoapods.org/using/the-podfile.html).
+
+    ```ruby
+    use_frameworks!
+
+    pod 'Cryptography'
+    ```
+
+2. Run `pod install` and open the `.xcworkspace` file to launch Xcode.
+
+3. Import the Cryptography framework.
+
+    ```swift
+    import Cryptography
+    ```
+
+### Install Using Carthage
+[Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency
+manager for Objective-C and Swift.
+
+1. Add the project to your [Cartfile](https://github.com/Carthage/Carthage/blob/master/Documentation/Artifacts.md#cartfile).
+
+    ```
+    github "mlachmish/Cryptography"
+    ```
+
+2. Run `carthage update` and follow [the additional steps](https://github.com/Carthage/Carthage#getting-started)
+   in order to add Cryptography to your project.
+
+3. Import the Cryptography framework.
+
+    ```swift
+    import Cryptography
+    ```
+    
+#### Manually
+Download and drop ```/Cryptography``` folder in your project.
+
 ## Usage
 
 ## Author
