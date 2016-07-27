@@ -18,6 +18,14 @@
 		62DD9FE8E6A2B7399D32CB81 /* Representations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DD919F73CA2BC4D7F5613D /* Representations.swift */; };
 		776FF7BDBF1A45E6C201071A /* Pods_Cryptography.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D80898C654248DD66FFF193 /* Pods_Cryptography.framework */; };
 		9037129A1D460FF4006413CB /* CryptographyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903712991D460FF4006413CB /* CryptographyTests.swift */; };
+		9037129C1D462948006413CB /* SHA2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9037129B1D462948006413CB /* SHA2.swift */; };
+		9037129E1D462985006413CB /* SHA2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9037129D1D462985006413CB /* SHA2Tests.swift */; };
+		9037129F1D47FB9F006413CB /* SHA2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9037129B1D462948006413CB /* SHA2.swift */; };
+		903712CD1D48A182006413CB /* RepresentationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903712CC1D48A182006413CB /* RepresentationsTests.swift */; };
+		903712CE1D48AE14006413CB /* Cryptography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906295791D2DA88000CC7E64 /* Cryptography.swift */; };
+		903712CF1D48AE32006413CB /* HMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9090381B1D32762800A62BEB /* HMAC.swift */; };
+		903712D01D48AE3F006413CB /* MACProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9090381D1D32763A00A62BEB /* MACProtocol.swift */; };
+		903712D21D48B2EB006413CB /* ArraySlicerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 903712D11D48B2EB006413CB /* ArraySlicerTests.swift */; };
 		9062957A1D2DA88000CC7E64 /* Cryptography.swift in Sources */ = {isa = PBXBuildFile; fileRef = 906295791D2DA88000CC7E64 /* Cryptography.swift */; };
 		9062957C1D2DAB9A00CC7E64 /* SHA1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9062957B1D2DAB9A00CC7E64 /* SHA1.swift */; };
 		9062957E1D2DAE2300CC7E64 /* SHA1Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9062957D1D2DAE2300CC7E64 /* SHA1Tests.swift */; };
@@ -59,6 +67,10 @@
 		74B90AD33C9235393E76A86C /* Pods-CryptographyTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptographyTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CryptographyTests/Pods-CryptographyTests.debug.xcconfig"; sourceTree = "<group>"; };
 		7F492EB75D9E87BF2CCAA7A3 /* Pods-CryptographyTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptographyTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CryptographyTests/Pods-CryptographyTests.release.xcconfig"; sourceTree = "<group>"; };
 		903712991D460FF4006413CB /* CryptographyTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CryptographyTests.swift; sourceTree = "<group>"; };
+		9037129B1D462948006413CB /* SHA2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHA2.swift; sourceTree = "<group>"; };
+		9037129D1D462985006413CB /* SHA2Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHA2Tests.swift; sourceTree = "<group>"; };
+		903712CC1D48A182006413CB /* RepresentationsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepresentationsTests.swift; sourceTree = "<group>"; };
+		903712D11D48B2EB006413CB /* ArraySlicerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArraySlicerTests.swift; sourceTree = "<group>"; };
 		906295791D2DA88000CC7E64 /* Cryptography.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cryptography.swift; sourceTree = "<group>"; };
 		9062957B1D2DAB9A00CC7E64 /* SHA1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHA1.swift; sourceTree = "<group>"; };
 		9062957D1D2DAE2300CC7E64 /* SHA1Tests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHA1Tests.swift; sourceTree = "<group>"; };
@@ -117,6 +129,7 @@
 			children = (
 				62DD9547EF7BEEA51DDBF684 /* MD5Tests.swift */,
 				9062957D1D2DAE2300CC7E64 /* SHA1Tests.swift */,
+				9037129D1D462985006413CB /* SHA2Tests.swift */,
 			);
 			path = Algorithms;
 			sourceTree = "<group>";
@@ -124,10 +137,10 @@
 		62DD962AE1326CC645DF4E4C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				90712B621D2D5058000485ED /* Accessors.swift */,
 				62DD9150F5C21F9CB03660E1 /* Arithmetics.swift */,
 				62DD93ACD6944601CF6556CB /* ArraySlicer.swift */,
 				62DD919F73CA2BC4D7F5613D /* Representations.swift */,
-				90712B621D2D5058000485ED /* Accessors.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -138,6 +151,7 @@
 				909038181D326D7500A62BEB /* HashProtocol.swift */,
 				62DD977C58657B9E58C13CF1 /* MD5.swift */,
 				9062957B1D2DAB9A00CC7E64 /* SHA1.swift */,
+				9037129B1D462948006413CB /* SHA2.swift */,
 			);
 			path = Hash;
 			sourceTree = "<group>";
@@ -147,6 +161,8 @@
 			children = (
 				62DD9C0DB68FE09A15BCAB37 /* AccessorsTests.swift */,
 				62DD9AF00DCA5B8A1E6E3909 /* ArithmeticsTests.swift */,
+				903712D11D48B2EB006413CB /* ArraySlicerTests.swift */,
+				903712CC1D48A182006413CB /* RepresentationsTests.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -430,6 +446,7 @@
 				9062957C1D2DAB9A00CC7E64 /* SHA1.swift in Sources */,
 				62DD91F13CFE534069A2FB3F /* MD5.swift in Sources */,
 				90712B631D2D5058000485ED /* Accessors.swift in Sources */,
+				9037129C1D462948006413CB /* SHA2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,17 +454,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				903712D01D48AE3F006413CB /* MACProtocol.swift in Sources */,
+				9037129F1D47FB9F006413CB /* SHA2.swift in Sources */,
 				90712B661D2D528A000485ED /* Accessors.swift in Sources */,
 				90712B611D2D43C3000485ED /* Representations.swift in Sources */,
 				9037129A1D460FF4006413CB /* CryptographyTests.swift in Sources */,
 				9062957E1D2DAE2300CC7E64 /* SHA1Tests.swift in Sources */,
 				90712B671D2D54D9000485ED /* Arithmetics.swift in Sources */,
+				903712CD1D48A182006413CB /* RepresentationsTests.swift in Sources */,
 				62DD9E7E4E9E6837D7CC6504 /* MD5.swift in Sources */,
 				9062957F1D2DAE4C00CC7E64 /* SHA1.swift in Sources */,
+				903712CE1D48AE14006413CB /* Cryptography.swift in Sources */,
 				62DD956BC9642840D422925E /* AccessorsTests.swift in Sources */,
 				9090381A1D32720C00A62BEB /* HashProtocol.swift in Sources */,
 				62DD944C94BC45A50831BF7D /* ArithmeticsTests.swift in Sources */,
 				62DD9E796E82B917B63BD8E0 /* MD5Tests.swift in Sources */,
+				903712D21D48B2EB006413CB /* ArraySlicerTests.swift in Sources */,
+				903712CF1D48AE32006413CB /* HMAC.swift in Sources */,
+				9037129E1D462985006413CB /* SHA2Tests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

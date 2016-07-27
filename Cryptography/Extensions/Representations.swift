@@ -37,6 +37,27 @@ class Representations {
         return result
     }
 
+    // Merge Array of UInt8 to array of UInt64
+    static func mergeToUInt64Array(slice: ArraySlice<UInt8>) -> Array<UInt64> {
+        var result = Array<UInt64>()
+        result.reserveCapacity(32)
+
+        for idx in slice.startIndex.stride(to: slice.endIndex, by: sizeof(UInt64)) {
+            let val1: UInt64 = UInt64(slice[idx.advancedBy(7)]) << 56
+            let val2: UInt64 = UInt64(slice[idx.advancedBy(6)]) << 48
+            let val3: UInt64 = UInt64(slice[idx.advancedBy(5)]) << 40
+            let val4: UInt64 = UInt64(slice[idx.advancedBy(4)]) << 32
+            let val5: UInt64 = UInt64(slice[idx.advancedBy(3)]) << 24
+            let val6: UInt64 = UInt64(slice[idx.advancedBy(2)]) << 16
+            let val7: UInt64 = UInt64(slice[idx.advancedBy(1)]) << 8
+            let val8: UInt64 = UInt64(slice[idx])
+            let val: UInt64 = val1 | val2 | val3 | val4 | val5 | val6 | val7 | val8
+            result.append(val)
+        }
+
+        return result
+    }
+
     // Return hexadecimal string representation of Array<UInt8>
     static func toHexadecimalString(bytes: Array<UInt8>) -> String {
         var hexString = String()
