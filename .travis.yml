@@ -3,7 +3,7 @@ osx_image: xcode7.3
 xcode_scheme: Cryptography
 before_install:
 - gem install cocoapods -v '= 1.0.0'
-- gem install xcpretty
+- gem install xcpretty --no-document
 script:
 - set -o pipefail # required to let xcpretty use the same exit code like xcodebuild
 - xcodebuild -project Cryptography.xcodeproj -scheme "Cryptography" -destination name="iPhone 6" -destination name="iPhone 6" test | xcpretty -c
@@ -11,7 +11,7 @@ script:
 after_success:
   - bash <(curl -s https://codecov.io/bash) -J 'Cryptography' # Code coverage
 deploy:
-  script:
-  - pod trunk push
+  provider: script
+  script: ./scripts/push.sh
   on:
     tags: true

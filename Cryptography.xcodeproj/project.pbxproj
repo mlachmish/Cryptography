@@ -135,6 +135,13 @@
 			path = Algorithms;
 			sourceTree = "<group>";
 		};
+		62DD960D37800D903125C37B /* scripts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = scripts;
+			sourceTree = "<group>";
+		};
 		62DD962AE1326CC645DF4E4C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -190,6 +197,7 @@
 				906740851D2AE326009A988D /* CryptographyTests */,
 				906740781D2AE326009A988D /* Products */,
 				7DD4D59DD5D3245841BC6B9C /* Frameworks */,
+				62DD960D37800D903125C37B /* scripts */,
 			);
 			sourceTree = "<group>";
 		};

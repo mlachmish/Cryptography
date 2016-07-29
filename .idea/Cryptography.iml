@@ -14,10 +14,10 @@
       <sourceFolder url="file://$MODULE_DIR$/CryptographyTests/CryptographyTests.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Cryptography/Algorithms/MAC/HMAC.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Cryptography/Algorithms/MAC/MACProtocol.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Cryptography/Algorithms/Hash/MD5.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Cryptography/Algorithms/Hash/SHA2.swift" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/Cryptography/Algorithms/Hash/SHA1.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Cryptography/Algorithms/Hash/HashProtocol.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Cryptography/Algorithms/Hash/MD5.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Cryptography/Algorithms/Hash/SHA1.swift" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/Cryptography/Algorithms/Hash/SHA2.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Cryptography/Cryptography.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Cryptography/Extensions/Accessors.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Cryptography/Extensions/Arithmetics.swift" isTestSource="false" />
@@ -26,6 +26,8 @@
       <sourceFolder url="file://$MODULE_DIR$/Cryptography/Cryptography.swift" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Cryptography/Info.plist" isTestSource="false" />
     </content>
+    <content url="file://$USER_HOME$/Library/Caches/AppCode2016.2/DerivedData/Cryptography-dqwvcflafnkztqesoxxlsdmuapac/Build/Intermediates/Cryptography.build/Debug-iphoneos/Cryptography.build/DerivedSources" />
+    <content url="file://$USER_HOME$/Library/Caches/AppCode2016.2/DerivedData/Cryptography-dqwvcflafnkztqesoxxlsdmuapac/Build/Intermediates/Cryptography.build/Debug-iphoneos/CryptographyTests.build/DerivedSources" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
       <library name="Header Search Paths">
