@@ -11,3 +11,8 @@ script:
 #- pod lib lint --quick # lint podspec
 after_success:
   - bash <(curl -s https://codecov.io/bash) -J 'Cryptography'
+deploy:
+  script:
+  - pod trunk push
+  on:
+    tags: true
