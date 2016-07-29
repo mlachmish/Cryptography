@@ -10,6 +10,9 @@ import Foundation
 
 protocol HashProtocol {
 
+    static func hash(message: [UInt8]) -> [UInt8]
+
+    //Convinence method for working with strings
     static func hash(message: String) -> String
 
 }

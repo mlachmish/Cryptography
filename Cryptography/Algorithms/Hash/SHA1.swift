@@ -8,11 +8,9 @@
 
 import Foundation
 
-private struct SHA1Constants {
-    static let messageLengthBits = 64
-}
+internal struct SHA1: HashProtocol {
 
-internal class SHA1: HashProtocol {
+    static let blockSize = 64
 
     private static func preprocessMessage(message: Array<UInt8>) -> Array<UInt8> {
         var preprocessedMessage = message
@@ -23,10 +21,10 @@ internal class SHA1: HashProtocol {
 
         // Pre-processing: padding with zeros
         // append "0" bit until message length in bits ≡ 448 (mod 512)
-        let desiredMessageLengthModulo = SHA1Constants.messageLengthBits - 8
+        let desiredMessageLengthModulo = blockSize - 8
         var messageLength = preprocessedMessage.count
         var paddingCounter = 0
-        while messageLength % SHA1Constants.messageLengthBits != desiredMessageLengthModulo {
+        while messageLength % blockSize != desiredMessageLengthModulo {
             paddingCounter += 1
             messageLength += 1
         }
@@ -40,7 +38,7 @@ internal class SHA1: HashProtocol {
     }
 
     // swiftlint:disable function_body_length
-    static func hash(message: String) -> String {
+    static func hash(message: [UInt8]) -> [UInt8] {
         // Initialize variables:
         var a0 = UInt32(0x67452301)   // A
         var b0 = UInt32(0xefcdab89)   // B
@@ -49,7 +47,7 @@ internal class SHA1: HashProtocol {
         var e0 = UInt32(0xC3D2E1F0)   // E
 
         // Pre-processing
-        let preprocessedMessage = preprocessMessage(Array(message.utf8))
+        let preprocessedMessage = preprocessMessage(message)
 
         // Process the message in successive 512-bit chunks:
         let chunkSizeBytes = 512 / 8
@@ -129,8 +127,12 @@ internal class SHA1: HashProtocol {
             result += Representations.toUInt8Array($0.bigEndian.reverseBytes())
         }
 
-        return Representations.toHexadecimalString(result)
+        return result
     }
     // swiftlint:enable function_body_length
+
+    static func hash(message: String) -> String {
+        return Representations.toHexadecimalString(self.hash(Array(message.utf8)))
+    }
 
 }

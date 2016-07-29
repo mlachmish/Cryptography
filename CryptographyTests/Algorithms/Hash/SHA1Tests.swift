@@ -36,6 +36,7 @@ class SHA1Tests: XCTestCase {
                        "SHA1 test failed")
     }
 
+    // Mark: Performance tests
     func testPerformanceExample() {
         self.measureBlock {
             SHA1.hash("The quick brown fox jumps over the lazy dog")

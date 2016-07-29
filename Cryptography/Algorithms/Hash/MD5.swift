@@ -7,11 +7,10 @@ import Foundation
 
 // Fowllowing the pseudo code from https://en.wikipedia.org/wiki/MD5
 
-private struct MD5Constants {
-    static let messageLengthBits = 64
-}
+internal struct MD5: HashProtocol {
 
-internal class MD5: HashProtocol {
+    internal static let blockSize = 64
+
     // swiftlint:disable variable_name
     // swiftlint:disable line_length
     // swiftlint:disable comma
@@ -53,10 +52,10 @@ internal class MD5: HashProtocol {
 
         // Pre-processing: padding with zeros
         // append "0" bit until message length in bits ≡ 448 (mod 512)
-        let desiredMessageLengthModulo = MD5Constants.messageLengthBits - 8
+        let desiredMessageLengthModulo = blockSize - 8
         var messageLength = preprocessedMessage.count
         var paddingCounter = 0
-        while messageLength % MD5Constants.messageLengthBits != desiredMessageLengthModulo {
+        while messageLength % blockSize != desiredMessageLengthModulo {
             paddingCounter += 1
             messageLength += 1
         }
@@ -71,8 +70,7 @@ internal class MD5: HashProtocol {
     }
 
     // swiftlint:disable function_body_length
-    static func hash(message: String) -> String {
-
+    static func hash(message: [UInt8]) -> [UInt8] {
         // Initialize variables:
         var a0 = UInt32(0x67452301)   // A
         var b0 = UInt32(0xefcdab89)   // B
@@ -80,7 +78,7 @@ internal class MD5: HashProtocol {
         var d0 = UInt32(0x10325476)   // D
 
         // Pre-processing
-        let preprocessedMessage = preprocessMessage(Array(message.utf8))
+        let preprocessedMessage = preprocessMessage(message)
 
         // Process the message in successive 512-bit chunks:
         let chunkSizeBytes = 512 / 8
@@ -141,8 +139,12 @@ internal class MD5: HashProtocol {
             result += Representations.toUInt8Array($0.littleEndian.reverseBytes())
         }
 
-        return Representations.toHexadecimalString(result)
+        return result
     }
     // swiftlint:enable function_body_length
+
+    static func hash(message: String) -> String {
+        return Representations.toHexadecimalString(self.hash(Array(message.utf8)))
+    }
 
 }

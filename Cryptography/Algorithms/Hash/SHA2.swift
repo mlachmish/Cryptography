@@ -20,6 +20,15 @@ public enum SHA2Variant {
     case SHA512SLASH224
     case SHA512SLASH256
 
+    public func hash(message: [UInt8]) -> [UInt8] {
+        switch self {
+        case .SHA224, .SHA256:
+            return SHA2.hash32Bit(message, sha2Variant: self)
+        case .SHA384, .SHA512, .SHA512SLASH224, .SHA512SLASH256:
+            return SHA2.hash64Bit(message, sha2Variant: self)
+        }
+    }
+
     public func hash(message: String) -> String {
         switch self {
         case .SHA224, .SHA256:
@@ -29,12 +38,12 @@ public enum SHA2Variant {
         }
     }
 
-    private var messageLengthBits: Int {
+    internal var blockSize: Int {
         switch self {
         case .SHA224, .SHA256:
-            return SHA2Constants.messageLengthBitsSHA256
+            return SHA2Constants.blockSizeSHA256
         case .SHA384, .SHA512, .SHA512SLASH224, .SHA512SLASH256:
-            return SHA2Constants.messageLengthBitsSHA512
+            return SHA2Constants.blockSizeSHA512
         }
     }
 
@@ -84,8 +93,8 @@ public enum SHA2Variant {
 
 private struct SHA2Constants {
 
-    static let messageLengthBitsSHA256 = 64
-    static let messageLengthBitsSHA512 = 128
+    static let blockSizeSHA256 = 64
+    static let blockSizeSHA512 = 128
 
     static let hSHA224: Array<UInt64> =
         [0xc1059ed8, 0x367cd507, 0x3070dd17, 0xf70e5939, 0xffc00b31, 0x68581511, 0x64f98fa7, 0xbefa4fa4]
@@ -142,7 +151,7 @@ private struct SHA2Constants {
 // swiftlint:enable line_length
 // swiftlint:enable comma
 
-internal class SHA2 {
+internal struct SHA2 {
 
     private static func preprocessMessage(message: Array<UInt8>,
                                           messageLengthBits: Int) -> Array<UInt8> {
@@ -173,7 +182,7 @@ internal class SHA2 {
 
     // swiftlint:disable function_body_length
     // MARK: 32 bit version
-    static func hash32Bit(message: String, sha2Variant: SHA2Variant) -> String {
+    static func hash32Bit(message: [UInt8], sha2Variant: SHA2Variant) -> [UInt8] {
         // Initialize variables:
         var a0 = UInt32(sha2Variant.h[0])   // A
         var b0 = UInt32(sha2Variant.h[1])   // B
@@ -185,8 +194,8 @@ internal class SHA2 {
         var h0 = UInt32(sha2Variant.h[7])   // H
 
         // Pre-processing
-        let preprocessedMessage = preprocessMessage(Array(message.utf8),
-                                                    messageLengthBits:sha2Variant.messageLengthBits)
+        let preprocessedMessage = preprocessMessage(message,
+                                                    messageLengthBits:sha2Variant.blockSize)
 
         // Process the message in successive 512-bit chunks:
         let chunkSizeBytes = 512 / 8
@@ -259,11 +268,17 @@ internal class SHA2 {
             result += Representations.toUInt8Array($0.bigEndian.reverseBytes())
         }
 
-        return Representations.toHexadecimalString(result)
+        return result
+    }
+
+    static func hash32Bit(message: String, sha2Variant: SHA2Variant) -> String {
+        return Representations.toHexadecimalString(
+            self.hash32Bit(Array(message.utf8), sha2Variant: sha2Variant)
+        )
     }
 
     // MARK: 64 bit version
-    static func hash64Bit(message: String, sha2Variant: SHA2Variant) -> String {
+    static func hash64Bit(message: [UInt8], sha2Variant: SHA2Variant) -> [UInt8] {
         // Initialize variables:
         var a0 = sha2Variant.h[0]   // A
         var b0 = sha2Variant.h[1]   // B
@@ -275,8 +290,8 @@ internal class SHA2 {
         var h0 = sha2Variant.h[7]   // H
 
         // Pre-processing
-        let preprocessedMessage = preprocessMessage(Array(message.utf8),
-                                                    messageLengthBits:sha2Variant.messageLengthBits)
+        let preprocessedMessage = preprocessMessage(message,
+                                                    messageLengthBits:sha2Variant.blockSize)
 
         // Process the message in successive 512-bit chunks:
         let chunkSizeBytes = 1024 / 8
@@ -353,8 +368,14 @@ internal class SHA2 {
             result = Array(result[0..<result.count - 4])
         }
 
-        return Representations.toHexadecimalString(result)
+        return result
     }
     // swiftlint:enable function_body_length
+
+    static func hash64Bit(message: String, sha2Variant: SHA2Variant) -> String {
+        return Representations.toHexadecimalString(
+            self.hash64Bit(Array(message.utf8), sha2Variant: sha2Variant)
+        )
+    }
 
 }

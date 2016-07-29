@@ -37,6 +37,7 @@ class MD5Tests: XCTestCase {
                        "MD5 test failed")
     }
 
+    // Mark: Performance tests
     func testPerformanceExample() {
         self.measureBlock {
             MD5.hash("The quick brown fox jumps over the lazy dog")

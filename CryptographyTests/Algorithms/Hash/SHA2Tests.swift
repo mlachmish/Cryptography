@@ -57,8 +57,7 @@ class SHA2Tests: XCTestCase {
                        "SHA2-512/256 test failed")
     }
 
-    // MARK:
-
+    // Mark: Performance tests
     func testPerformanceSHA224() {
         self.measureBlock {
             SHA2Variant.SHA224.hash("")

@@ -10,6 +10,9 @@ import Foundation
 
 protocol MACProtocol {
 
-    static func sign(message: String, key: String, hashMethod: HashMethod) -> String
+    static func authenticate(message: [UInt8], key: [UInt8], hashMethod: HashMethod) -> [UInt8]
+
+    //Convinence method for working with strings
+    static func authenticate(message: String, key: String, hashMethod: HashMethod) -> String
 
 }

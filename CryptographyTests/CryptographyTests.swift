@@ -77,18 +77,42 @@ class CryptographyTests: XCTestCase {
     }
 
     // Test MAC
-    func testHMACMD5() {
-        XCTAssertEqual(Cryptography.sign("", key: "key",
+    func testHMACwMD5Positive1() {
+        XCTAssertEqual(Cryptography.authenticate("", key: "",
             method: MACMethod.HMAC(hashMethod: HashMethod.MD5)),
-                       "",
-                       "HMAC-MD5 sanity failed")
+                       "74e6f7298a9c2d168935f58c001bad88")
     }
 
-    func testHMACSHA1() {
-        XCTAssertEqual(Cryptography.sign("", key: "key",
+    func testHMACwSHA1Positive1() {
+        XCTAssertEqual(Cryptography.authenticate("", key: "",
             method: MACMethod.HMAC(hashMethod: HashMethod.SHA1)),
-                       "",
-                       "HMAC-SHA1 sanity failed")
+                       "fbdb1d1b18aa6c08324b7d64b71fb76370690e1d")
+    }
+
+    func testHMACwSHA256Positive1() {
+        XCTAssertEqual(Cryptography.authenticate("", key: "",
+            method: MACMethod.HMAC(hashMethod: HashMethod.SHA2(sha2Variant: SHA2Variant.SHA256))),
+                       "b613679a0814d9ec772f95d778c35fc5ff1697c493715653c6c712144292c5ad")
+    }
+
+    func testHMACwSHA384Positive1() {
+        XCTAssertEqual(
+            Cryptography.authenticate("",
+                key: "",
+                method: MACMethod.HMAC(hashMethod:HashMethod.SHA2(sha2Variant:SHA2Variant.SHA384))),
+            // swiftlint:disable line_length
+            "6c1f2ee938fad2e24bd91298474382ca218c75db3d83e114b3d4367776d14d3551289e75e8209cd4b792302840234adc")
+            // swiftlint:enable line_length
+    }
+
+    func testHMACwSHA512Positive1() {
+        XCTAssertEqual(
+            Cryptography.authenticate("",
+                key: "",
+                method: MACMethod.HMAC(hashMethod:HashMethod.SHA2(sha2Variant:SHA2Variant.SHA512))),
+            // swiftlint:disable line_length
+            "b936cee86c9f87aa5d3c6f2e84cb5a4239a5fe50480a6ec66b70ab5b1f4ac6730c6c515421b327ec1d69402e53dfb49ad7381eb067b338fd7b0cb22247225d47")
+            // swiftlint:enable line_length
     }
 
 }
