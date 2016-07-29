@@ -40,11 +40,11 @@ internal struct SHA1: HashProtocol {
     // swiftlint:disable function_body_length
     static func hash(message: [UInt8]) -> [UInt8] {
         // Initialize variables:
-        var a0 = UInt32(0x67452301)   // A
-        var b0 = UInt32(0xefcdab89)   // B
-        var c0 = UInt32(0x98badcfe)   // C
-        var d0 = UInt32(0x10325476)   // D
-        var e0 = UInt32(0xC3D2E1F0)   // E
+        var a0: UInt32 = 0x67452301   // A
+        var b0: UInt32 = 0xefcdab89   // B
+        var c0: UInt32 = 0x98badcfe   // C
+        var d0: UInt32 = 0x10325476   // D
+        var e0: UInt32 = 0xC3D2E1F0   // E
 
         // Pre-processing
         let preprocessedMessage = preprocessMessage(message)
