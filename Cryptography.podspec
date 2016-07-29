@@ -13,7 +13,7 @@ Message Authentication Codes - HMAC
   s.homepage         = 'https://github.com/mlachmish/Cryptography'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Matan Lachmish' => 'mlachmish@gmail.com' }
-  s.source           = { :git => 'https://github.com/mlachmish/Cryptography.git' }
+  s.source           = { :git => 'https://github.com/mlachmish/Cryptography.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/mlachmish'
 
   s.ios.deployment_target = '8.0'
