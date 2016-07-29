@@ -36,8 +36,13 @@
 
 ## Features
 
-- [x] Hash - MD5, SHA1
-- [x] Sign - HMAC
+- [x] Hash Functions
+  - MD5
+  - SHA-1
+  - SHA-2 <sub>(SHA-224, SHA-256, SHA-384, SHA-512, SHA-512/224, SHA-512/256)</sub>
+  - SHA-3
+- [x] Message Authentication Codes
+  - HMAC
 
 ## Installation
 
