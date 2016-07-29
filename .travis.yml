@@ -12,6 +12,6 @@ after_success:
   - bash <(curl -s https://codecov.io/bash) -J 'Cryptography' # Code coverage
 deploy:
   provider: script
-  script: ./scripts/push.sh
+  script: pod trunk push
   on:
     tags: true
