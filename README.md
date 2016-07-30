@@ -37,8 +37,8 @@
 <p align="center">A modern cryptography library in Swift.</p>
 <p align="center">
   <a href="#features">Features</a>
-  • <a href="#installation">Installation</a>
   • <a href="#usage">Usage</a>
+  • <a href="#installation">Installation</a>
   • <a href="http://cocoadocs.org/docsets/Cryptography">Documentation</a>
   • <a href="#author">Author</a>
   • <a href="#license">License</a>
