@@ -9,9 +9,9 @@
 import Foundation
 
 // MARK: hash functions
-typealias MD5Impl = MD5
-typealias SHA1Impl = SHA1
-typealias SHA2Impl = SHA2
+private typealias MD5Impl = MD5
+private typealias SHA1Impl = SHA1
+private typealias SHA2Impl = SHA2
 
 /**
  Hash Methods.
@@ -61,7 +61,7 @@ public enum HashMethod {
 }
 
 // MARK: message authentication codes
-typealias HMACImpl = HMAC
+private typealias HMACImpl = HMAC
 
 /**
  Message Authentication Codes (MAC).
@@ -105,7 +105,7 @@ public struct Cryptography {
 
      - Returns: The calculated hash value.
     */
-    static func hash(message: [UInt8], method: HashMethod) -> [UInt8] {
+    public static func hash(message: [UInt8], method: HashMethod) -> [UInt8] {
         return method.hash(message)
     }
 
@@ -117,7 +117,7 @@ public struct Cryptography {
 
     - returns: The calculated hash value.
     */
-    static func hash(message: String, method: HashMethod) -> String {
+    public static func hash(message: String, method: HashMethod) -> String {
         return method.hash(message)
     }
 
@@ -130,7 +130,7 @@ public struct Cryptography {
 
     - returns: The calculated code value.
     */
-    static func authenticate(message: [UInt8], key: [UInt8], method: MACMethod) -> [UInt8] {
+    public static func authenticate(message: [UInt8], key: [UInt8], method: MACMethod) -> [UInt8] {
         return method.authenticate(message, key: key)
     }
 
@@ -143,7 +143,7 @@ public struct Cryptography {
 
     - returns: The calculated code value.
     */
-    static func authenticate(message: String, key: String, method: MACMethod) -> String {
+    public static func authenticate(message: String, key: String, method: MACMethod) -> String {
         return method.authenticate(message, key: key)
     }
 
