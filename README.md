@@ -133,12 +133,6 @@ to learn more.
 
 2. Run `pod install` and open the `.xcworkspace` file to launch Xcode.
 
-3. Import the Cryptography framework.
-
-    ```swift
-    import Cryptography
-    ```
-
 ### Install Using Carthage
 [Carthage](https://github.com/Carthage/Carthage) is a decentralized dependency
 manager for Objective-C and Swift.
@@ -151,12 +145,6 @@ manager for Objective-C and Swift.
 
 2. Run `carthage update` and follow [the additional steps](https://github.com/Carthage/Carthage#getting-started)
    in order to add Cryptography to your project.
-
-3. Import the Cryptography framework.
-
-    ```swift
-    import Cryptography
-    ```
     
 ###Swift Package Manager
 You can use [Swift Package Manager](https://swift.org/package-manager/) and specify dependency in `Package.swift` by adding this:
