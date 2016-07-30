@@ -8,13 +8,13 @@
 
 import Foundation
 
-extension UInt32 {
+internal extension UInt32 {
 
-    public func rotateLeft(times: UInt32) -> UInt32 {
+    func rotateLeft(times: UInt32) -> UInt32 {
         return (self << times) | (self >> (32 - times))
     }
 
-    public func rotateRight(times: UInt32) -> UInt32 {
+    func rotateRight(times: UInt32) -> UInt32 {
         return (self >> times) | (self << (32 - times))
     }
 
@@ -26,13 +26,13 @@ extension UInt32 {
 
 }
 
-extension UInt64 {
+internal extension UInt64 {
 
-    public func rotateLeft(times: UInt64) -> UInt64 {
+    func rotateLeft(times: UInt64) -> UInt64 {
         return (self << times) | (self >> (64 - times))
     }
 
-    public func rotateRight(times: UInt64) -> UInt64 {
+    func rotateRight(times: UInt64) -> UInt64 {
         return ((self >> times) | (self << (64 - times)))
     }
 

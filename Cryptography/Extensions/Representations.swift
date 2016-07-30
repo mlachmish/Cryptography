@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Representations {
+internal class Representations {
 
     // Array of bytes with optional padding (little-endian)
     static func toUInt8Array<T>(value: T, length: Int? = nil) -> Array<UInt8> {

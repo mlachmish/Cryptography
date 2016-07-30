@@ -8,7 +8,7 @@
 
 import Foundation
 
-extension UInt32 {
+internal extension UInt32 {
 
     var firstByte: UInt8 {
         return UInt8(self & 0xff)
@@ -28,7 +28,7 @@ extension UInt32 {
 
 }
 
-extension UInt64 {
+internal extension UInt64 {
 
     var firstByte: UInt8 {
         return UInt8(self & 0xff)
