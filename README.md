@@ -39,6 +39,7 @@
   <a href="#features">Features</a>
   • <a href="#installation">Installation</a>
   • <a href="#usage">Usage</a>
+  • <a href="http://cocoadocs.org/docsets/Cryptography">Documentation</a>
   • <a href="#author">Author</a>
   • <a href="#license">License</a>
 </p>
@@ -51,7 +52,63 @@
   - SHA-2 <sub>(SHA-224, SHA-256, SHA-384, SHA-512, SHA-512/224, SHA-512/256)</sub>
   - SHA-3
 - [x] Message Authentication Codes
-  - HMAC
+  - HMAC <sub>(via: SHA-3/SHA-2/SHA-1/MD5)</sub>
+
+### Soon to come
+- [ ] High Speed Stream Ciphers
+  - ChaCha
+  - Panama
+  - Sosemanuk
+  - Salsa20
+- [ ] block ciphers
+  - AES (Rijndael)
+  - Triple-DES (DES-EDE2 and DES-EDE3)
+  - Blowfish
+  - RC5
+- [ ] Message Authentication Codes
+  - VMAC
+  - CMAC
+  - GMAC
+- [ ] Hash Functions
+  - BLAKE2s
+  - BLAKE2b
+  - RIPEMD
+- [ ] Public-Key Cryptography
+  - RSA
+  - DSA
+  - ElGamal
+  - Nyberg-Rueppel (NR)
+  - Rabin-Williams (RW)
+- [ ] Key Agreement Schemes
+  - Diffie-Hellman (DH)
+  - Unified Diffie-Hellman (DH2)
+- [ ] Elliptic Curve Cryptography
+  - ECDSA
+  - ECNR
+  - ECIES
+
+## Usage
+
+* [Hash Functions](#hash-functions)
+* [Message Authentication Codes](#message-authentication-codes)
+
+First import Cryptography module.
+```swift 
+import Cryptography
+```
+Everything you need is available via the ``` Cryptography ``` facade.
+
+### Hash Functions
+In order to calculate a hash value you simply call ``` Cryptography.hash(message: String, method: HashMethod) -> String ``` with the desired ``` HashMethod ```
+```swift
+let hashValue = Cryptography.hash("The quick brown fox jumps over the lazy dog", method: HashMethod.SHA1) // "2fd4e1c67a2d28fced849ee1bb76e7391b93eb12"
+```
+
+### Message Authentication Codes
+In order to calculate a MAC value you simply call ``` authenticate(message: String, key: String, method: MACMethod) -> String ``` with the desired ``` MACMethod ```
+```swift
+let macValue = Cryptography.authenticate("The quick brown fox jumps over the lazy dog", key: "key", method: MACMethod.HMAC(hashMethod: HashMethod.SHA1)) // "de7c9b85b8b78aa6bc8a7a36f70a90701c9db4d9"
+```
 
 ## Installation
 
@@ -110,12 +167,16 @@ You can use [Swift Package Manager](https://swift.org/package-manager/) and spec
 ### Manually
 Download and drop ```/Cryptography``` folder in your project.
 
-## Usage
-
 ## Author
 
 Matan Lachmish <sub>a.k.a</sub> <b>The Big Fat Ninja</b> <img src="assets/TheBigFatNinja.png?raw=true" alt="The Big Fat Ninja" width="13"><br>
 https://thebigfatninja.xyz
+
+### Audit & Security Disclosure
+
+If you believe you have identified a security vulnerability with Cryptography,<br>
+please report it as soon as possible via email to security@thebigfatninja.xyz<br>
+Do not post it to the public issue tracker.
 
 ### attribution
 
