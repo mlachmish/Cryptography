@@ -22,6 +22,9 @@
     <a href="https://codecov.io/gh/mlachmish/Cryptography">
       <img src="https://codecov.io/gh/mlachmish/Cryptography/branch/master/graph/badge.svg?style=flat" alt="Code Coverage">
     </a>
+    <a href="http://cocoadocs.org/docsets/Cryptography">
+      <img src="https://img.shields.io/cocoapods/metrics/doc-percent/Cryptography.svg?style=flat" alt="Doc Coverage">
+    </a>
   <br>
       <a href="https://cocoapods.org/pods/Cryptography">
         <img src="https://img.shields.io/cocoapods/v/Cryptography.svg?style=flat"
